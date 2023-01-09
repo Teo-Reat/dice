@@ -1,0 +1,259 @@
+body {
+    background: radial-gradient(rgb(150, 200, 256), rgb(100, 220, 250));
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.container {
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+.box {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    transform-style: preserve-3d;
+
+}
+.animation {
+    animation: animate 3s ease-in-out;
+}
+.side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 5px solid #002244;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: rgba(4, 59, 92, 0.95);
+}
+.one {
+    transform: translateZ(125px);
+    font-size: 156px;
+    font-weight: bolder;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.four {
+    transform: translateZ(-125px);
+}
+.two {
+    bottom: 125px;
+    transform: rotateX(-90deg);
+}
+.six {
+    top: 125px;
+    transform: rotateX(90deg);
+}
+.three {
+    right: 125px;
+    transform: rotateY(-90deg);
+}
+.five {
+    left: 125px;
+    transform: rotateY(90deg);
+}
+
+.pic_one {
+    height: 60px;
+    width: 60px;
+    background: white;
+    border-radius: 50%;
+}
+
+.pic_two,
+.pic_three,
+.pic_four,
+.pic_five,
+.pic_six {
+    position: absolute;
+    inset: 0;
+}
+
+.pic_two > .p_one,
+.pic_two > .p_two {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background: white;
+    border-radius: 50%;
+    top: 40px;
+    left: 40px;
+}
+
+.pic_two > .p_two {
+    top: auto;
+    left: auto;
+    bottom: 40px;
+    right: 40px;
+}
+
+.pic_three > .p_one,
+.pic_three > .p_two,
+.pic_three > .p_three {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    top: 40px;
+    left: 40px;
+}
+
+.pic_three > .p_two {
+    top: auto;
+    left: auto;
+    bottom: 40px;
+    right: 40px;
+}
+
+.pic_three > .p_three {
+    top: auto;
+    left: auto;
+    bottom: 105px;
+    right: 105px;
+}
+
+.pic_four > .p_one,
+.pic_four > .p_two,
+.pic_four > .p_three,
+.pic_four > .p_four {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    top: 40px;
+    left: 40px;
+}
+
+.pic_four > .p_two {
+    top: auto;
+    left: auto;
+    bottom: 40px;
+    right: 40px;
+}
+
+.pic_four > .p_three {
+    top: auto;
+    left: 40px;
+    bottom: 40px;
+    right: auto;
+}
+
+.pic_four > .p_four {
+    top: 40px;
+    left: auto;
+    bottom: auto;
+    right: 40px;
+}
+
+.pic_five > .p_one,
+.pic_five > .p_two,
+.pic_five > .p_three,
+.pic_five > .p_four,
+.pic_five > .p_five {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    top: 40px;
+    left: 40px;
+}
+
+.pic_five > .p_two {
+    top: auto;
+    left: auto;
+    bottom: 40px;
+    right: 40px;
+}
+
+.pic_five > .p_three {
+    top: auto;
+    left: 40px;
+    bottom: 40px;
+    right: auto;
+}
+
+.pic_five > .p_four {
+    top: 40px;
+    left: auto;
+    bottom: auto;
+    right: 40px;
+}
+
+.pic_five > .p_five {
+    top: auto;
+    left: auto;
+    bottom: 105px;
+    right: 105px;
+}
+
+.pic_six > .p_one,
+.pic_six > .p_two,
+.pic_six > .p_three,
+.pic_six > .p_four,
+.pic_six > .p_five,
+.pic_six > .p_six {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    top: 40px;
+    left: 40px;
+}
+
+.pic_six > .p_two {
+    top: auto;
+    left: auto;
+    bottom: 40px;
+    right: 40px;
+}
+
+.pic_six > .p_three {
+    top: auto;
+    left: 40px;
+    bottom: 40px;
+    right: auto;
+}
+
+.pic_six > .p_four {
+    top: 40px;
+    left: auto;
+    bottom: auto;
+    right: 40px;
+}
+
+.pic_six > .p_five {
+    top: auto;
+    left: auto;
+    bottom: 105px;
+    right: 40px;
+}
+
+.pic_six > .p_six {
+    top: auto;
+    left: 40px;
+    bottom: 105px;
+    right: auto;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(3600deg) rotateY(-3600deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+}
